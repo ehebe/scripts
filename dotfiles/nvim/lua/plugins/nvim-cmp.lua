@@ -16,6 +16,7 @@ return {
     "saadparwaiz1/cmp_luasnip", -- for autocompletion
     "rafamadriz/friendly-snippets", -- useful snippets
     "onsails/lspkind.nvim", -- vs-code like pictograms
+    "chrisgrieser/cmp_yanky",
   },
   config = function()
     local cmp = require("cmp")
@@ -50,6 +51,7 @@ return {
         { name = "luasnip" }, -- snippets
         { name = "buffer" }, -- text within current buffer
         { name = "path" }, -- file system paths
+        name = "cmp_yanky",
         -- { name = "codeium" }, -- codeium
       }),
 
