@@ -12,7 +12,7 @@ return {
 
     -- configure treesitter
     treesitter.setup({
-
+      modules = { "regex" },
       sync_install = false,
       auto_install = true,
       -- enable indentation
