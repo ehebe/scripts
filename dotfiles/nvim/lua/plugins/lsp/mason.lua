@@ -51,6 +51,11 @@ return {
     })
 
     mason_tool_installer.setup({
+      integrations = {
+        ["mason-lspconfig"] = true,
+        ["mason-null-ls"] = true,
+        ["mason-nvim-dap"] = true,
+      },
       ensure_installed = {
         "prettier", -- prettier formatter
         "stylua", -- lua formatter

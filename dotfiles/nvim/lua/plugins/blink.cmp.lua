@@ -51,7 +51,7 @@ return {
 
       snippets = { preset = "luasnip" },
       sources = {
-        default = { "lazydev", "lsp", "path", "snippets", "buffer" },
+        default = { "lazydev", "lsp", "path", "snippets", "buffer", "cmdline" },
         providers = {
           lazydev = {
             name = "LazyDev",
