@@ -4,18 +4,10 @@ return {
   dependencies = {
     "rafamadriz/friendly-snippets",
     "folke/lazydev.nvim",
-    {
-      "L3MON4D3/LuaSnip",
-      -- follow latest release.
-      version = "v2.*", -- Replace <CurrentMajor> by the latest released major (first number of latest release)
-      -- install jsregexp (optional!).
-      build = "make install_jsregexp",
-    },
   },
   version = "1.*",
   opts = {},
   config = function()
-    require("luasnip.loaders.from_vscode").lazy_load()
     require("blink.cmp").setup({
       keymap = {
         preset = "enter",
@@ -49,7 +41,7 @@ return {
         nerd_font_variant = "mono",
       },
 
-      snippets = { preset = "luasnip" },
+      snippets = { preset = "default" },
       sources = {
         default = { "lazydev", "lsp", "path", "snippets", "buffer", "cmdline" },
         providers = {

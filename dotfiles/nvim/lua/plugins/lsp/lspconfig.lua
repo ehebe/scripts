@@ -3,7 +3,6 @@ return {
   event = { "BufReadPre", "BufNewFile" },
   dependencies = {
     "antosha417/nvim-lsp-file-operations",
-    { "saghen/blink.cmp" },
   },
   config = function()
     -- import lspconfig plugin
@@ -12,10 +11,6 @@ return {
     -- import mason_lspconfig plugin
     local mason_lspconfig = require("mason-lspconfig")
     -- local path = require("lspconfig.util").path
-
-    -- import blink_cmp_lsp plugin
-    local blink_cmp_lsp = require("blink.cmp")
-
     local keymap = vim.keymap -- for conciseness
 
     vim.api.nvim_create_autocmd("LspAttach", {
@@ -68,15 +63,6 @@ return {
     })
 
     local op = require("lsp-file-operations").default_capabilities()
-    lspconfig.util.default_config = vim.tbl_extend("force", lspconfig.util.default_config, {
-      capabilities = vim.tbl_deep_extend(
-        "force",
-        blink_cmp_lsp.get_lsp_capabilities(),
-        op
-        -- returns configured operations if setup() was already called
-        -- or default operations if not
-      ),
-    })
 
     -- used to enable autocompletion (assign to every lsp server config)
     --local capabilities = blink_cmp_lsp.get_lsp_capabilities()
