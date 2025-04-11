@@ -6,7 +6,7 @@ return {
       log = {
         level = "error",
       },
-      templates = { "builtin", "user.cpp", "user.python" },
+      templates = { "builtin" },
       strategy = "toggleterm",
     })
   end,

@@ -12,7 +12,7 @@ return {
       local dapui = require("dapui")
       local dap_python = require("dap-python")
 
-      require("dapui").setup({})
+      require("dapui").setup()
       require("nvim-dap-virtual-text").setup({
         commented = true, -- Show virtual text alongside comment
       })

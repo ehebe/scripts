@@ -25,6 +25,12 @@ return {
       source_selector = {
         winbar = true,
         statusline = true,
+        truncation_character = "...",
+        sources = {
+          { source = "filesystem", display_name = " 󰉓 Files " },
+          { source = "buffers", display_name = " 󰈙 Buffers " },
+          { source = "git_status", display_name = " 󰊢 Git " },
+        },
       },
     })
 

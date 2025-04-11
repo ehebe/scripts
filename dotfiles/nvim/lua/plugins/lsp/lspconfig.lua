@@ -203,6 +203,9 @@ return {
           end,
         })
       end,
+      ["rust_analyzer"] = function()
+        lspconfig["rust_analyzer"].setup({})
+      end,
     })
   end,
 }

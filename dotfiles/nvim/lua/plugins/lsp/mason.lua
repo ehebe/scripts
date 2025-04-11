@@ -43,8 +43,7 @@ return {
         "prismals",
         "pyright",
         "ruff",
-        "clangd",
-        "cmake",
+        "rust_analyzer",
         "dockerls",
         "marksman", --markdown
       },

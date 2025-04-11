@@ -66,7 +66,7 @@ return {
         "asm",
         "nasm",
         "make",
-        "cmake",
+        "rust",
         "doxygen",
         "python",
         "nginx",
